@@ -1,0 +1,91 @@
+.overview-view { min-width: 0; }
+.overview-view .page-title h1 { max-width: 820px; font-size: 31px; line-height: 1.3; }
+.overview-view .page-title .intro > p { max-width: 700px; }
+.ov-goal { border: 1px solid #d1ddc8; background: #edf3e6; border-radius: 8px; padding: 19px 22px; margin-bottom: 22px; }
+.ov-goal > p { margin: 12px 0; color: #425a3c; font-size: 13px; line-height: 1.8; }
+.overview-view details > summary { cursor: pointer; color: var(--green); font-size: 11px; line-height: 1.7; }
+.overview-view details[open] > summary { margin-bottom: 12px; }
+.ov-goal details p { font-size: 12px; line-height: 1.8; white-space: pre-wrap; }
+.ov-launch { padding-top: 14px; margin-top: 16px; border-top: 1px solid #d1ddc8; }
+.ov-launch > p { margin: 10px 0 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.ov-depth { display: grid; gap: 3px; color: var(--muted); font-size: 8px; }
+.ov-depth select { min-height: 34px; border: 1px solid #c4d0ba; border-radius: 4px; padding: 5px 8px; background: #f9fbf5; color: var(--green); font-family: inherit; font-size: 10px; line-height: 1.5; }
+.ov-results-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.ov-answer { border-top: 3px solid #7b9670; }
+.ov-answer h2, .ov-next-grid h2, .ov-output h2, .ov-output-empty h2 { font: 24px/1.4 var(--serif); margin: 17px 0; }
+.ov-answer .card-top { align-items: flex-start; }
+.ov-answer-text { font-size: 13px; line-height: 1.85; }
+.ov-answer-text p { font-size: 13px; line-height: 1.85; }
+.ov-answer-text h4 { font-size: 13px; }
+.ov-source-text { border-top: 1px solid var(--line); padding-top: 13px; margin: 16px 0; }
+.ov-answer-scope { border-top: 1px solid var(--line); padding-top: 13px; margin: 19px 0 0 !important; font-size: 10px !important; line-height: 1.8; color: var(--muted); }
+.ov-output { padding: 18px; }
+.ov-plot { display: block; text-decoration: none; color: var(--green); margin-top: 15px; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; background: white; }
+.ov-plot img { display: block; width: 100%; max-height: 420px; object-fit: contain; }
+.ov-plot > span { display: block; font-size: 10px; padding: 9px 12px; border-top: 1px solid var(--line); background: #f6f8f0; }
+.ov-file-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 13px 0; }
+.ov-file-list > a { display: grid; gap: 4px; border: 1px solid var(--line); border-radius: 4px; padding: 10px; text-decoration: none; color: var(--green); min-width: 0; }
+.ov-file-list span { overflow-wrap: anywhere; font-size: 10px; }
+.ov-file-list small { color: var(--muted); font-size: 8px; line-height: 1.6; }
+.ov-check-state { background: #f5f0e6; padding: 10px 12px; border-radius: 4px; font-size: 10px !important; line-height: 1.7; color: #786441; }
+.ov-output > .tiny { margin: 14px 0 0; font-size: 9px; line-height: 1.7; }
+.ov-output-placeholder { padding: 18px 2px 5px; }
+.ov-output-placeholder > span { font: 34px/1.2 var(--serif); color: #829875; }
+.ov-output-empty { background: #f6f7f0; border-style: dashed; }
+.ov-output-empty > p { font-size: 12px; line-height: 1.8; }
+.ov-next-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
+.ov-next-grid h2 { font-size: 21px; margin: 12px 0; }
+.ov-next-grid p, .ov-next-grid li { font-size: 11px; line-height: 1.85; }
+.ov-next-grid ul { padding-left: 18px; }
+.ov-next-grid li + li { margin-top: 9px; }
+.ov-next-grid details { margin: 13px 0; }
+.ov-remaining { background: #f7f5ee; }
+.ov-section-title { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin: 30px 0 14px; }
+.ov-section-title h2 { margin: 0; font: 20px/1.4 var(--serif); }
+.ov-section-title p { margin: 0; font-size: 10px; line-height: 1.7; max-width: 360px; color: var(--muted); }
+.ov-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.ov-step { display: grid; justify-items: start; align-content: start; gap: 8px; min-width: 0; padding: 15px; text-align: left; background: #fafbf6; color: var(--green); border: 0; border-right: 1px solid var(--line); }
+.ov-step:last-child { border-right: 0; }
+.ov-step:hover, .ov-step:focus-visible { background: #edf3e5; }
+.ov-step.has-record { background: #f0f5e9; }
+.ov-step-number { border: 1px solid #bccdb1; border-radius: 50%; width: 25px; height: 25px; display: grid; place-items: center; font: 13px var(--serif); }
+.ov-step strong { font-size: 11px; line-height: 1.5; font-weight: 500; }
+.ov-step small { min-height: 31px; font-size: 9px; line-height: 1.7; color: var(--muted); }
+.ov-step-open { font-size: 9px; }
+.ov-starters { padding: 18px 0; margin-top: 18px; border-top: 1px solid var(--line); }
+.ov-starters > summary { display: list-item; }
+.ov-starters > summary > span { font-size: 13px; margin-right: 15px; }
+.ov-starters > summary > small { color: var(--muted); font-size: 10px; }
+.ov-starters > p { font-size: 11px; line-height: 1.7; }
+.ov-starter-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
+.ov-starter-grid > article { min-width: 0; padding: 16px; border: 1px solid var(--line); border-radius: 5px; }
+.ov-starter-grid h3 { font: 18px/1.4 var(--serif); margin: 9px 0; }
+.ov-starter-grid p, .ov-starter-grid li { font-size: 11px; line-height: 1.8; }
+.ov-starter-grid details { margin: 15px 0; }
+.ov-problem-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 25px; }
+.ov-problem-card { text-align: left; display: flex; flex-direction: column; color: inherit; }
+.ov-problem-card:hover, .ov-problem-card:focus-visible { border-color: #a9bf9a; background: #f3f7ed; }
+.ov-problem-card h3 { font: 22px/1.4 var(--serif); }
+.ov-problem-card > p { color: var(--muted); font-size: 12px; line-height: 1.8; flex: 1; }
+.ov-problem-foot { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); padding-top: 13px; color: var(--muted); font-size: 9px; line-height: 1.7; }
+.ov-problem-foot b { color: var(--green); font-weight: 500; }
+@media (max-width: 1200px) {
+  .ov-results-grid { grid-template-columns: 1fr; }
+  .ov-plot img { max-height: 430px; }
+  .ov-step { padding: 12px 10px; }
+}
+@media (max-width: 700px) {
+  .overview-view .page-title h1 { font-size: 26px; }
+  .ov-goal { padding: 17px; }
+  .ov-next-grid, .ov-starter-grid, .ov-problem-grid { grid-template-columns: 1fr; }
+  .ov-section-title { display: block; }
+  .ov-section-title p { margin-top: 8px; }
+  .ov-steps { grid-template-columns: 1fr; }
+  .ov-step { grid-template-columns: 28px minmax(0, 1fr) auto; gap: 4px 10px; padding: 12px; border-right: 0; border-bottom: 1px solid var(--line); align-items: center; }
+  .ov-step:last-child { border-bottom: 0; }
+  .ov-step-number { grid-row: 1 / 3; }
+  .ov-step small { grid-column: 2; min-height: 0; }
+  .ov-step-open { grid-column: 3; grid-row: 1 / 3; }
+  .ov-starters > summary > small { display: block; margin-top: 5px; }
+  .ov-answer h2 { font-size: 22px; }
+}

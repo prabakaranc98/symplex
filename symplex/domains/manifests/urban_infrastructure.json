@@ -1,0 +1,52 @@
+{
+  "id": "urban_infrastructure",
+  "name": "Urban infrastructure",
+  "cases": [
+    {
+      "id": "U1",
+      "title": "Can network-aware demand estimates identify bike-station imbalances earlier?",
+      "status": "specification_only",
+      "adapter": null,
+      "problem_dna": "System/problem DNA: bikes and stations are stocks, rides are flows, commuters have recurring demand, and unavailable stations can redirect riders. The observed data measure completed rides; unserved demand and historical rebalancing are not fully observed. The user is an operations planner seeking where and when to inspect or rebalance.",
+      "evidence_contract": "Real evidence: Citi Bike publishes trip histories with start/end stations and timestamps, plus a live GBFS feed. The data page also describes filtering and removed service trips. Citi Bike system data.",
+      "system_spec": "Models and wiring: compare seasonal per-station counts, a count/state-space model and a network-coupled variant. Astra generates schema reconciliation, station/time aggregation, graph construction, model fitting and prediction code. Add stock/capacity constraints only where corresponding inventory observations exist.",
+      "hypotheses": "Rivals: each station's local calendar pattern is enough; connected stations' lagged flows improve forecasts; apparent improvements result from future information or changing station IDs.",
+      "benchmark": "Experiment: fit earlier weeks, select on later weeks and confirm on untouched days, retaining whole-day dependence. Evaluate held-out incoming/outgoing completed trips and net-flow imbalance. Include station-level error and tail imbalances, not only the network mean.",
+      "decision_contract": "Judgment and use: actual flow prediction can be verified from trip data. Stockout prediction requires matching inventory history or prospective collection. Alternative rebalancing outcomes are model-based until validated prospectively; completed-trip data alone cannot prove saved trips. Produce a station watchlist and a conditional rebalancing simulation with these boundaries visible.",
+      "research_actions": "Meta-test: compare investigating temporal alignment and flow imbalance first versus adding a more complex model first, using equal research caps on fresh station/time subsets.",
+      "adapters": {
+        "load": "not implemented",
+        "fit": "not implemented",
+        "export": "planned"
+      },
+      "source_urls": [
+        "https://citibikenyc.com/system-data",
+        "https://github.com/liyaguang/DCRNN"
+      ],
+      "full_specification": "Real evidence: Citi Bike publishes trip histories with start/end stations and timestamps, plus a live GBFS feed. The data page also describes filtering and removed service trips. Citi Bike system data.\n\nSystem/problem DNA: bikes and stations are stocks, rides are flows, commuters have recurring demand, and unavailable stations can redirect riders. The observed data measure completed rides; unserved demand and historical rebalancing are not fully observed. The user is an operations planner seeking where and when to inspect or rebalance.\n\nRivals: each station's local calendar pattern is enough; connected stations' lagged flows improve forecasts; apparent improvements result from future information or changing station IDs.\n\nModels and wiring: compare seasonal per-station counts, a count/state-space model and a network-coupled variant. Astra generates schema reconciliation, station/time aggregation, graph construction, model fitting and prediction code. Add stock/capacity constraints only where corresponding inventory observations exist.\n\nExperiment: fit earlier weeks, select on later weeks and confirm on untouched days, retaining whole-day dependence. Evaluate held-out incoming/outgoing completed trips and net-flow imbalance. Include station-level error and tail imbalances, not only the network mean.\n\nJudgment and use: actual flow prediction can be verified from trip data. Stockout prediction requires matching inventory history or prospective collection. Alternative rebalancing outcomes are model-based until validated prospectively; completed-trip data alone cannot prove saved trips. Produce a station watchlist and a conditional rebalancing simulation with these boundaries visible.\n\nMeta-test: compare investigating temporal alignment and flow imbalance first versus adding a more complex model first, using equal research caps on fresh station/time subsets."
+    },
+    {
+      "id": "U2",
+      "title": "Do congestion patterns propagate through the road network or reflect shared daily demand?",
+      "status": "specification_only",
+      "adapter": null,
+      "problem_dna": "System/problem DNA: sensors observe a coupled road network; local slowdowns and upstream/downstream interactions evolve alongside common commute patterns. The application is an operational congestion forecast with a measured lead time.",
+      "evidence_contract": "Real evidence: METR-LA/PEMS-BAY provide real traffic time series; the DCRNN authors provide data links, sensor graph information, baseline code and reported forecasting results. Authors' repository, DCRNN paper.",
+      "system_spec": "Models/code: persistence, seasonal/independent autoregression, graph-lag regression or state-space dynamics; optional neural graph model after the sprint. Astra writes adapters and competing models, reuses sensor graph metadata and defines consistent missing-value handling.",
+      "hypotheses": "Rivals: per-sensor seasonality is sufficient; network-lag structure adds predictive information; a shared latent driver explains the apparent propagation.",
+      "benchmark": "Experiment: use the published split/protocol for any comparison with published scores; otherwise clearly report a new small-slice benchmark. Compare a real graph, a degree-controlled shuffled graph and an independent model. Hold out contiguous time blocks and report separate forecast horizons. A published DCRNN score is a reference, not a result the prototype has reproduced.",
+      "decision_contract": "Judgment/decision: MAE/RMSE, congestion-alert precision/recall under a prespecified definition, and errors by sensor/regime. A graph's predictive value does not alone establish causal traffic propagation. Export a forecast/alert artifact; road-control interventions need separate simulation and field validation.",
+      "research_actions": "Meta-test: does identifying graph-versus-common-driver ambiguity before architecture search improve useful forecasts per run? Record tool and training costs along with predictive quality.",
+      "adapters": {
+        "load": "not implemented",
+        "fit": "not implemented",
+        "export": "planned"
+      },
+      "source_urls": [
+        "https://citibikenyc.com/system-data",
+        "https://github.com/liyaguang/DCRNN"
+      ],
+      "full_specification": "Real evidence: METR-LA/PEMS-BAY provide real traffic time series; the DCRNN authors provide data links, sensor graph information, baseline code and reported forecasting results. Authors' repository, DCRNN paper.\n\nSystem/problem DNA: sensors observe a coupled road network; local slowdowns and upstream/downstream interactions evolve alongside common commute patterns. The application is an operational congestion forecast with a measured lead time.\n\nRivals: per-sensor seasonality is sufficient; network-lag structure adds predictive information; a shared latent driver explains the apparent propagation.\n\nModels/code: persistence, seasonal/independent autoregression, graph-lag regression or state-space dynamics; optional neural graph model after the sprint. Astra writes adapters and competing models, reuses sensor graph metadata and defines consistent missing-value handling.\n\nExperiment: use the published split/protocol for any comparison with published scores; otherwise clearly report a new small-slice benchmark. Compare a real graph, a degree-controlled shuffled graph and an independent model. Hold out contiguous time blocks and report separate forecast horizons. A published DCRNN score is a reference, not a result the prototype has reproduced.\n\nJudgment/decision: MAE/RMSE, congestion-alert precision/recall under a prespecified definition, and errors by sensor/regime. A graph's predictive value does not alone establish causal traffic propagation. Export a forecast/alert artifact; road-control interventions need separate simulation and field validation.\n\nMeta-test: does identifying graph-versus-common-driver ambiguity before architecture search improve useful forecasts per run? Record tool and training costs along with predictive quality."
+    }
+  ]
+}

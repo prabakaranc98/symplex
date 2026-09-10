@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "max_bytes": 2000000,
+  "allowed_hosts": [
+    "raw.githubusercontent.com",
+    "github.com",
+    "ral.ucar.edu",
+    "quickstats.nass.usda.gov",
+    "power.larc.nasa.gov",
+    "snap.stanford.edu",
+    "citibikenyc.com",
+    "www.ncbi.nlm.nih.gov",
+    "ftp.ncbi.nlm.nih.gov"
+  ],
+  "basis": "Exact public source hosts from the existing domain/dataset catalog, including their primary raw-file endpoints. This operator-owned network policy does not select a dataset, endorse its content, or establish measurement validity."
+}

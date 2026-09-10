@@ -1,0 +1,109 @@
+/* Symplex interface tokens. Scientific plots retain their original recorded pixels. */
+:root {
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #17243a;
+  --muted: #526278;
+  --line: #dce3ed;
+  --green: #2854c7;
+  --pale: #edf3ff;
+  --lime: #e4edff;
+  --orange: #92610f;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  --serif: var(--sans);
+}
+body { font-size: 14px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: var(--sans); font-weight: 650; letter-spacing: -.025em; }
+h1, .overview-view .page-title h1 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.2; max-width: 1000px; }
+h2 { font-size: 24px; line-height: 1.35; }
+h3 { font-size: 19px; line-height: 1.4; }
+p, li { overflow-wrap: anywhere; }
+.tiny, .eyebrow, .card-top, .tag, .muted, .section-label { font-size: 11px; }
+.eyebrow { letter-spacing: .09em; font-weight: 650; }
+.page-title { margin-bottom: 24px; }
+.topbar { background: #fff; height: 62px; border-bottom-color: var(--line); }
+.breadcrumbs, .problem-switcher, .quiet { font-size: 12px; }
+.problem-switcher { border-radius: 8px; min-height: 36px; color: var(--ink); }
+.local-label { font-size: 10px; letter-spacing: .04em; }
+.card, .panel, .ov-goal, .problem-hero { border-radius: 12px; border-color: var(--line); }
+.card { box-shadow: 0 2px 8px #16264504; }
+.btn, button.primary, .new-problem { border-radius: 8px; font-weight: 600; }
+.btn:hover, button.primary:hover { filter: brightness(.96); }
+input, textarea, select { border-radius: 8px; }
+.chat-panel { background: #fff; border-left: 1px solid var(--line); }
+.chat-heading h3 { font-size: 21px; }
+.chat-welcome { font-size: 13px; }
+.composer { border-radius: 10px; }
+.composer:focus-within { box-shadow: 0 0 0 3px #2854c715; }
+.ov-goal { background: #edf3ff; border-color: #d9e5fd; padding: 20px 24px; }
+.ov-goal > p { color: #253e63; font-size: 14px; line-height: 1.65; }
+.ov-launch { border-color: #d4dff2; }
+.ov-depth, .ov-depth select, .ov-launch > p { font-size: 11px; }
+.ov-depth select { background: #fff; border-color: var(--line); color: var(--ink); }
+.ov-answer { border-top: 3px solid #477af0; }
+.ov-answer h2, .ov-output h2, .ov-output-empty h2 { font-size: 22px; font-weight: 650; }
+.ov-answer-text, .ov-answer-text p { font-size: 14px; line-height: 1.7; }
+.ov-answer-scope { font-size: 12px !important; line-height: 1.7; }
+.ov-remaining, .ov-check-state { background: #fff7e9; color: #765017; }
+.ov-check-state { font-size: 12px !important; }
+.ov-output-empty { background: #f8faff; }
+.ov-output-placeholder > span { color: #6084bd; font-weight: 650; }
+.ov-plot > span { background: #f6f8fc; font-size: 12px; }
+.ov-file-list span, .ov-file-list small, .ov-output > .tiny { font-size: 11px; }
+.ov-next-grid p, .ov-next-grid li, .ov-goal details p { font-size: 13px; line-height: 1.7; }
+.ov-section-title h2, .ov-next-grid h2 { font-size: 20px; font-weight: 650; }
+.ov-section-title p, .ov-starters > summary > small, .ov-starters > p { font-size: 12px; }
+.overview-view details > summary { font-size: 12px; }
+.ov-step { background: #fff; padding: 17px 14px; gap: 10px; transition: background .15s ease; }
+.ov-step.has-record { background: #edf3ff; }
+.ov-step:hover, .ov-step:focus-visible { background: #e1ebff; }
+.ov-step-number { background: white; border-color: #b7cdf4; font: 600 13px var(--sans); }
+.ov-step strong { font-size: 13px; font-weight: 650; }
+.ov-step small, .ov-step-open { font-size: 11px; }
+.ov-starter-grid p, .ov-starter-grid li { font-size: 13px; }
+.ov-problem-card h3 { font-size: 20px; font-weight: 650; }
+.ov-problem-card > p { font-size: 13px; }
+.ov-problem-card:hover { background: #f7faff; border-color: #afc6ed; }
+.ov-problem-foot { font-size: 11px; }
+.result-file { border-radius: 10px; }
+.result-markdown { font-size: 14px; line-height: 1.75; }
+.result-markdown table { font-size: 12px; }
+.cx-graph, .engine-map { border-radius: 12px; }
+@media (min-width: 701px) {
+  .sidebar { width: 224px; padding: 20px 14px 12px; background: #132238; border-color: #22334c; color: #edf3ff; }
+  .shell { margin-left: 224px; }
+  .brand { color: #f5f8ff; font-size: 21px; gap: 10px; }
+  .brandmark { display: grid; place-items: center; width: 31px; height: 34px; font: 750 27px var(--sans); color: #93b5ff; font-style: normal; }
+  .brand-sub { color: #91a3bf; font-size: 8px; letter-spacing: 1.4px; }
+  .new-problem { margin: 20px 0 18px; min-height: 39px; background: #376dec; font-size: 12px; }
+  .nav-label { color: #91a3bf; font-size: 9px; margin-bottom: 5px; }
+  .nav-item { color: #bdcadb; padding: 7px 10px; font-size: 12px; gap: 10px; border-radius: 7px; min-height: 32px; }
+  .nav-item:hover { color: white; background: #20344f; }
+  .nav-item.active { color: #fff; background: #284268; box-shadow: inset 3px 0 #7aa2ff; }
+  .nav-section-label { color: #8b9db7; font-size: 9px; margin-top: 12px; margin-bottom: 5px; }
+  .nav-count { color: #aabfdf; font-size: 10px; }
+  .nav-details { border-color: #2b3e58; margin-top: 8px; }
+  .nav-details > summary, .nav-details[open] > summary { color: #aebed4; padding: 6px 10px; }
+  .nav-details > summary:hover { background: #20344f; color: #fff; }
+  .problems-label { margin-top: 12px; }
+  .problem-list { min-height: 35px; max-height: 11vh; }
+  .problem-link { color: #b7c5d9; font-size: 11px; padding: 7px 10px; }
+  .problem-link.selected { color: #fff; background: #203956; border-radius: 6px; }
+  .sidebar-bottom { border-color: #2b3e58; padding-top: 12px; color: #d4deed; }
+  .sidebar-bottom small { color: #97a9c3; font-size: 10px; }
+  .sidebar-bottom .model-dot { background: #67d7ba; }
+}
+@media (min-width: 1051px) {
+  main { padding: 30px 34px 64px; }
+}
+@media (max-width: 700px) {
+  .topbar { height: auto; }
+  .ov-goal { padding: 17px; }
+  .ov-step { padding: 14px; }
+  h1, .overview-view .page-title h1 { font-size: 26px; }
+  .ov-next-grid p, .ov-next-grid li { font-size: 13px; }
+  .brand { font-family: var(--sans); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

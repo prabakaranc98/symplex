@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Symplex — System design</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <article class="research-article">
+      <a href="/">← Back to Symplex</a>
+      <h1>Symplex: a problem-solving system</h1>
+      <p>
+        Symplex’s unit of work is a versioned solution to a decision problem. It
+        connects a beneficiary and measurable outcome to evidence, rival
+        mechanisms, a system representation, executable components, experiments
+        and a consumable result. A solution can be an operational watchlist, a
+        forecasting component, a planning scenario, or a proposal for an
+        informative experiment.
+      </p>
+      <h2>Problem structure precedes model choice</h2>
+      <p>
+        The user begins in conversation. The agent establishes the
+        decision-maker, available interventions, objectives, time horizon,
+        constraints and missing information. It decomposes the problem into
+        subquestions with dependencies and acceptance checks. Decomposition
+        should cover the decision without treating interacting mechanisms as
+        independent. An apparently exhaustive list is a hypothesis to review,
+        not proof that no relevant factor is missing.
+      </p>
+      <p>
+        A solution graph records entities, state variables, feedback,
+        observation processes and constraints. Component interfaces carry
+        input/output meaning, units, timing and provenance. A biological
+        transport problem, an airport access problem and a market-reliability
+        problem require different component libraries and evaluators. The common
+        structure is how they are specified, executed, compared and delivered.
+      </p>
+      <h2>Program revisions and recorded evaluation</h2>
+      <p>
+        Symplex can revise a program from a selected predecessor, execute the
+        new code, and compare its outputs under a frozen protocol. The archive
+        groups evaluated packages by declared model kinds, evidence basis and
+        protocol. Parent selection uses prior visits and the fraction of frozen
+        host numerical checks passed. Different protocols remain separate;
+        these diagnostic scores do not measure scientific accuracy.
+      </p>
+      <p>
+        Every collected computation package receives an execution assessment.
+        Source hashes, check outcomes and failure details remain linked to the
+        run. Separate model critique can inform the next action but cannot
+        replace those numerical checks or establish independent scientific
+        validation.
+      </p>
+      <h2>An adaptive agent, with a protected execution host</h2>
+      <p>
+        The runtime selects the next action from available tools. It can inspect
+        supplied context, discover datasets, research an uncertainty, design a
+        system, freeze an experiment, execute hosted Python or a supported
+        adapter, revise a program, critique a model, or deliver. Results return to persistent
+        state before the next choice. Input snapshots show new or changed user
+        context; an explicit reframe action can revise the decision framing
+        while preserving earlier versions. Failures can send the agent back to
+        evidence collection or model design.
+      </p>
+      <p>
+        Astra handles problem decomposition, system synthesis, model proposals
+        and metareasoning. A lighter model handles conversational clarification.
+        A separate model reviews the final evidence and claims. This model
+        review is not numerical authority: the host owns metrics, task splits,
+        resource ceilings, model-selection rules and audit seals. Role
+        separation within one provider is weaker than fully independent external
+        scientific review.
+      </p>
+      <p>
+        Focused, balanced and thorough profiles allow progressively more actions
+        and revisions. Every profile shares the workspace resource ledger.
+        Additional compute may improve search or simply expose a failure; it
+        does not justify asserting an improvement. Failed calls preserve
+        conservative reservations when actual billing is unknown.
+      </p>
+      <h2>Evidence, model assets and heterogeneous composition</h2>
+      <p>
+        Sources can be local context, explicit assumptions, CSV or JSON
+        artifacts, site geography, prepared empirical packs or retrieved
+        evidence. Schema and provenance checks describe which inputs were
+        admitted; they do not establish that a source claim is true. Search
+        results and attached documents remain evidence, rather than instructions
+        that can alter the execution policy.
+      </p>
+      <p>
+        Croissant is a metadata format describing datasets, resources, structure
+        and ML semantics. Its Python implementation provides metadata validation
+        and loading interfaces. Symplex uses it to validate a locally authored
+        mapping of an unchanged public dataset; it does not assume every source
+        in Google’s catalog publishes Croissant metadata. Metadata validation
+        does not establish label accuracy, causal identification, licensing
+        compatibility or fitness for a decision.
+        <a href="https://docs.mlcommons.org/croissant/"
+          >MLCommons Croissant documentation</a
+        >.
+      </p>
+      <p>
+        The registry distinguishes API models, executable scientific components
+        and unconfigured specialist-model extensions. A future Hugging Face
+        component needs a pinned revision, input/output contract, preprocessing,
+        license and evaluation before selection. An API-only model cannot be
+        treated as a locally available checkpoint for weight merging.
+      </p>
+      <h2>Executable paths in this version</h2>
+      <p>
+        Hosted Python lets Astra write and execute problem-specific models with
+        supplied documents, images and data. Generated code, CSV/JSON outputs
+        and plots are preserved. Frozen protocols bind system versions and
+        numerical checks to the executed inputs. The host recomputes the checks
+        from recorded CSV bytes; summary metrics and interpretation remain
+        maker-reported. An archive-selected program revision must include the
+        predecessor's Python source within its input envelope.
+      </p>
+      <p>
+        Interactive 3D replay uses recorded state coordinates. Exact CSV-column
+        projections and row filters can create a phase-space view without
+        another model run. The viewer exposes source/run references and steps
+        through recorded frames; it does not invent missing samples or infer
+        physical geometry.
+      </p>
+      <p>
+        The prepared P1 path admits timestamped binary-event observations,
+        checks whole-group chronological boundaries, fits a training-only
+        calibrator, applies exact-metadata probability constraints, generates a
+        typed mutation and scores the result with a host-owned evaluator.
+        Confirmation follows frozen selection and is consumed once. A prepared
+        real archive remains necessary for an empirical market claim; the
+        included fixture is synthetic.
+      </p>
+      <p>
+        The general system runner executes a bounded stochastic influence graph:
+        normalized states, positive or negative couplings, delays, inertia,
+        noise and clamped interventions. Scenarios use common exogenous random
+        streams. A coupling ablation shows dependence on the assumed interaction
+        structure. User what-if changes create new model versions and actually
+        rerun the computation. This representation is useful for testing
+        integration and exploring assumptions; it is not a substitute for a
+        calibrated hydrological, transportation or biological simulator.
+      </p>
+      <p>
+        The optional BamTwoogle adapter tests research procedures on disjoint
+        groups of public questions. The dataset contains 100 human-authored
+        multi-step questions. The pilot uses a single question in each of
+        development, validation and audit, so its results are descriptive.
+        Public benchmark contamination and exact-match limitations remain. A
+        research benchmark cannot substitute for a domain outcome.
+        <a href="https://github.com/google-research-datasets/BamTwoogle"
+          >Google Research, BamTwoogle</a
+        >.
+      </p>
+      <h2>Examples of domain-specific extensions</h2>
+      <p>
+        For hydrological recovery, Caravan provides meteorological forcing,
+        catchment attributes and discharge. A useful extension would compare
+        reservoir or storage models against an earlier-flow baseline using
+        withheld time blocks and basin groups. Reanalysis inputs support
+        conditional retrospective modeling, not automatically operational
+        forecasts. Original Caravan and its MultiMet extension also use
+        different daily time conventions.
+        <a href="https://github.com/kratzert/Caravan"
+          >Caravan project documentation</a
+        >.
+      </p>
+      <p>
+        For infrastructure demand, Google’s power trace describes 57 power
+        domains. A proposed decision tool could compare peak-load estimates
+        under shared-demand and independent models, then identify where operator
+        review is warranted. A prediction of load does not establish the
+        consequences of a new control policy. This adapter is specified, not
+        implemented.
+        <a
+          href="https://github.com/google/cluster-data/blob/master/PowerData2019.md"
+          >Google, PowerData 2019</a
+        >.
+      </p>
+      <p>
+        The five supplied domain packs preserve ten empirical problem contracts.
+        Biology needs measured perturbation or population data and appropriate
+        replicate units; urban forecasting needs aligned networks and time
+        boundaries; market inference needs exact settlement semantics.
+        Additional model families should enter through a common adapter
+        interface while retaining these domain-specific checks.
+      </p>
+      <h2>Method improvement and claims</h2>
+      <p>
+        Scientific-program evolution and research-policy evolution are separate
+        archives. A policy change should be motivated by development traces,
+        compared under matched caps on separate validation tasks, frozen, and
+        audited once. This prototype includes a small research-policy pilot and
+        an allowlisted diagnostic-order patch. General recursive
+        self-improvement, model-weight learning and cross-domain transfer are
+        not demonstrated.
+      </p>
+      <p>
+        A decision artifact must identify the recommended next action, best
+        alternative, assumptions, reversal conditions, unresolved evidence and
+        linked runs. A useful result may be a rejected hypothesis, an
+        inconclusive comparison, an exported component or a precise missing-data
+        request. No measured benefit is inferred from the elegance of a system
+        graph or the fluency of an explanation.
+      </p>
+      <h2>References</h2>
+      <ol class="sources">
+        <li>
+          <a href="https://developers.openai.com/api/docs/models/gpt-6-astra"
+            >OpenAI: GPT-6 Astra</a
+          >;
+          <a
+            href="https://developers.openai.com/api/docs/guides/function-calling"
+            >function calling</a
+          >;
+          <a href="https://developers.openai.com/api/docs/pricing"
+            >API pricing</a
+          >.
+        </li>
+        <li>
+          <a href="https://www.palantir.com/docs/foundry/logic"
+            >Palantir: AIP Logic</a
+          >.
+        </li>
+        <li>
+          <a
+            href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+            >Google DeepMind: AlphaEvolve, 2025</a
+          >.
+        </li>
+        <li>
+          <a href="https://arxiv.org/abs/1504.04909"
+            >Mouret and Clune: Illuminating search spaces by mapping elites,
+            2015</a
+          >.
+        </li>
+        <li>
+          <a
+            href="https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/"
+            >Google Research: AI co-scientist, 2025</a
+          >.
+        </li>
+        <li>
+          <a href="https://research.google/resources/datasets/"
+            >Google Research datasets</a
+          >;
+          <a href="https://docs.mlcommons.org/croissant/">MLCommons Croissant</a
+          >.
+        </li>
+        <li>
+          <a href="https://github.com/google-research-datasets/BamTwoogle"
+            >Google Research: BamTwoogle</a
+          >.
+        </li>
+        <li>
+          <a href="https://github.com/kratzert/Caravan"
+            >Caravan project and source-dataset licensing references</a
+          >.
+        </li>
+        <li>
+          <a
+            href="https://github.com/google/cluster-data/blob/master/PowerData2019.md"
+            >Google: PowerData 2019</a
+          >.
+        </li>
+      </ol>
+    </article>
+  </body>
+</html>

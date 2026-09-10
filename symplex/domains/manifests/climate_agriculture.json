@@ -1,0 +1,54 @@
+{
+  "id": "climate_agriculture",
+  "name": "Climate & agriculture",
+  "cases": [
+    {
+      "id": "C1",
+      "title": "Why do some catchments recover slowly after drought?",
+      "status": "specification_only",
+      "adapter": null,
+      "problem_dna": "System/problem DNA: precipitation, snow, soil/storage and drainage interact through stocks, flows and delays. The practical output is a low-flow/recovery forecast for water-resource analysis.",
+      "evidence_contract": "Real evidence: CAMELS-US includes daily meteorological forcing, streamflow and catchment attributes for 671 catchments minimally affected by human activity. The documented record covers 1980\u20132014; verify gauge-specific completeness. Dataset/downloads, primary dataset paper.",
+      "system_spec": "Models/code: seasonal/lagged-flow baseline, linear reservoir, nonlinear storage alternative and optional neural residual with uncertainty. Astra generates unit/time alignment, inference wrappers and candidate storage/observation mechanisms. Preserve nonnegative storage and mass balance where the model represents them.",
+      "hypotheses": "Rivals: rainfall deficits and seasonality explain persistence; nonlinear storage produces hydrological memory; snow processes or forcing/observation errors explain remaining differences.",
+      "benchmark": "Experiment: proposed split 1981\u20132004 fit, 2005\u20132009 development and 2010\u20132014 test, subject to actual coverage. Start with a small packaged basin subset. Freeze drought/recovery definitions before evaluation and use only information available at each forecast time. With realized future weather forcing, report conditional hydrological simulation rather than an operational weather-unknown forecast.",
+      "decision_contract": "Judgment/meta-test: discharge error, low-flow bias, recovery-time error, interval coverage and basin-wise robustness. Test residual-directed choice of storage/snow hypotheses against a fixed model-search sequence on new basin tasks. These data do not establish farmer behavior, pumping or allocation-policy effects. Consumption: a basin recovery report, conditional forecasts and targeted additional-measurement suggestions.",
+      "research_actions": "Judgment/meta-test: discharge error, low-flow bias, recovery-time error, interval coverage and basin-wise robustness. Test residual-directed choice of storage/snow hypotheses against a fixed model-search sequence on new basin tasks. These data do not establish farmer behavior, pumping or allocation-policy effects. Consumption: a basin recovery report, conditional forecasts and targeted additional-measurement suggestions.",
+      "adapters": {
+        "load": "not implemented",
+        "fit": "not implemented",
+        "export": "planned"
+      },
+      "source_urls": [
+        "https://ral.ucar.edu/solutions/products/camels",
+        "https://quickstats.nass.usda.gov/",
+        "https://power.larc.nasa.gov/"
+      ],
+      "full_specification": "Real evidence: CAMELS-US includes daily meteorological forcing, streamflow and catchment attributes for 671 catchments minimally affected by human activity. The documented record covers 1980\u20132014; verify gauge-specific completeness. Dataset/downloads, primary dataset paper.\n\nSystem/problem DNA: precipitation, snow, soil/storage and drainage interact through stocks, flows and delays. The practical output is a low-flow/recovery forecast for water-resource analysis.\n\nRivals: rainfall deficits and seasonality explain persistence; nonlinear storage produces hydrological memory; snow processes or forcing/observation errors explain remaining differences.\n\nModels/code: seasonal/lagged-flow baseline, linear reservoir, nonlinear storage alternative and optional neural residual with uncertainty. Astra generates unit/time alignment, inference wrappers and candidate storage/observation mechanisms. Preserve nonnegative storage and mass balance where the model represents them.\n\nExperiment: proposed split 1981\u20132004 fit, 2005\u20132009 development and 2010\u20132014 test, subject to actual coverage. Start with a small packaged basin subset. Freeze drought/recovery definitions before evaluation and use only information available at each forecast time. With realized future weather forcing, report conditional hydrological simulation rather than an operational weather-unknown forecast.\n\nJudgment/meta-test: discharge error, low-flow bias, recovery-time error, interval coverage and basin-wise robustness. Test residual-directed choice of storage/snow hypotheses against a fixed model-search sequence on new basin tasks. These data do not establish farmer behavior, pumping or allocation-policy effects. Consumption: a basin recovery report, conditional forecasts and targeted additional-measurement suggestions."
+    },
+    {
+      "id": "C2",
+      "title": "When do heat and moisture stress combine into regional crop losses?",
+      "status": "specification_only",
+      "adapter": null,
+      "problem_dna": "System/problem DNA: crop response interacts with heat, moisture, seasonal timing and spatially shared weather; concurrent stress can create correlated county losses. Management and cultivar changes are partly unobserved. The application is regional crop-risk assessment.",
+      "evidence_contract": "Real evidence: USDA NASS Quick Stats county corn-grain yield estimates joined to NASA POWER daily weather. Query CORN, GRAIN - YIELD, MEASURED IN BU / ACRE; begin with one state and a proposed 2000\u20132023 window, verifying coverage and suppression first. USDA Quick Stats, NASA POWER.",
+      "system_spec": "Models/code: county trend, additive weather regression, interaction/spline model and an optional mechanistic stress index. Generate joins, unit normalization, suppression handling and training-only detrending. If actual soil moisture is unavailable, label precipitation-based quantities as moisture proxies. AquaCrop can later add a model layer; it does not supply the observed yield labels.",
+      "hypotheses": "Rivals: additive weather response is sufficient; heat\u2013moisture interactions add nonlinear loss; trends and unobserved management explain apparent effects. Regional co-failure may reflect shared drivers rather than county-to-county propagation.",
+      "benchmark": "Experiment: proposed fit 2000\u20132014, develop 2015\u20132018 and test 2019\u20132023; evaluate geographically withheld groups separately. A model using the full growing season's realized weather is an end-of-season hindcast. Earlier operational warnings require truncated weather and appropriate forecasts.",
+      "decision_contract": "Judgment/meta-test: yield-anomaly error, calibrated severe-loss probabilities and regional co-occurrence, with uncertainty preserving shared-year dependence. Test whether investigation targeted at compound-stress years improves unseen-year reliability versus average-error-only search. County estimates and gridded weather do not identify field-level causal effects. Consumption: a regional risk report, failure conditions and a list of missing management observations.",
+      "research_actions": "Judgment/meta-test: yield-anomaly error, calibrated severe-loss probabilities and regional co-occurrence, with uncertainty preserving shared-year dependence. Test whether investigation targeted at compound-stress years improves unseen-year reliability versus average-error-only search. County estimates and gridded weather do not identify field-level causal effects. Consumption: a regional risk report, failure conditions and a list of missing management observations.",
+      "adapters": {
+        "load": "not implemented",
+        "fit": "not implemented",
+        "export": "planned"
+      },
+      "source_urls": [
+        "https://ral.ucar.edu/solutions/products/camels",
+        "https://quickstats.nass.usda.gov/",
+        "https://power.larc.nasa.gov/"
+      ],
+      "full_specification": "Real evidence: USDA NASS Quick Stats county corn-grain yield estimates joined to NASA POWER daily weather. Query CORN, GRAIN - YIELD, MEASURED IN BU / ACRE; begin with one state and a proposed 2000\u20132023 window, verifying coverage and suppression first. USDA Quick Stats, NASA POWER.\n\nSystem/problem DNA: crop response interacts with heat, moisture, seasonal timing and spatially shared weather; concurrent stress can create correlated county losses. Management and cultivar changes are partly unobserved. The application is regional crop-risk assessment.\n\nRivals: additive weather response is sufficient; heat\u2013moisture interactions add nonlinear loss; trends and unobserved management explain apparent effects. Regional co-failure may reflect shared drivers rather than county-to-county propagation.\n\nModels/code: county trend, additive weather regression, interaction/spline model and an optional mechanistic stress index. Generate joins, unit normalization, suppression handling and training-only detrending. If actual soil moisture is unavailable, label precipitation-based quantities as moisture proxies. AquaCrop can later add a model layer; it does not supply the observed yield labels.\n\nExperiment: proposed fit 2000\u20132014, develop 2015\u20132018 and test 2019\u20132023; evaluate geographically withheld groups separately. A model using the full growing season's realized weather is an end-of-season hindcast. Earlier operational warnings require truncated weather and appropriate forecasts.\n\nJudgment/meta-test: yield-anomaly error, calibrated severe-loss probabilities and regional co-occurrence, with uncertainty preserving shared-year dependence. Test whether investigation targeted at compound-stress years improves unseen-year reliability versus average-error-only search. County estimates and gridded weather do not identify field-level causal effects. Consumption: a regional risk report, failure conditions and a list of missing management observations."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+const box={URL,localStorage:{getItem(){return null}},document:{querySelector(){return {}}}};
+vm.createContext(box);
+vm.runInContext(fs.readFileSync('symplex/interfaces/web/common.js','utf8'),box);
+const formatted=vm.runInContext(`resultText('<img src=x onerror=alert(1)>\\n\\n**Result** [bad](javascript:alert) [source](https://example.org) [missing](sandbox:/mnt/data/missing.csv)')`,box);
+assert(!formatted.includes('<img'));
+assert(!formatted.includes('href="javascript:'));
+assert(!formatted.includes('href="sandbox:'));
+assert(formatted.includes('<strong>Result</strong>'));
+assert(formatted.includes('href="https://example.org/"'));
+console.log('Result formatting: escaped HTML, safe external links, no fabricated file links.');

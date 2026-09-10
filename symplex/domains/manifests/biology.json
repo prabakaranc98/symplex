@@ -1,0 +1,52 @@
+{
+  "id": "biology",
+  "name": "Biology",
+  "cases": [
+    {
+      "id": "B1",
+      "title": "Which combined gene perturbations produce responses that additive effects cannot explain?",
+      "status": "specification_only",
+      "adapter": null,
+      "problem_dna": "System/problem DNA: interacting genetic programs produce cell-expression responses. Perturbation pairs can amplify or buffer responses, but observed interaction depends on the measurement scale. The user is a researcher prioritizing informative combinations.",
+      "evidence_contract": "Real evidence: Norman et al. 2019, GEO accession GSE133344, with original author code and a standardized scPerturb file NormanWeissman2019_filtered.h5ad. The full file is roughly 699 MB; prepackage a scientifically justified subset for the sprint. Author repository, standardized dataset record.",
+      "system_spec": "Models/code: explicitly define response relative to control and its scale; compare additive effects, an interaction model and a neural/graph comparator when available. Astra writes perturbation/control alignment, response aggregation, training code and comparison reports. The official GEARS repository provides a Norman loader and comparator; its documentation notes that reliable combination prediction needs some combination data during training. GEARS.",
+      "hypotheses": "Rivals: additive single-perturbation effects explain combinations; low-rank/nonlinear interactions add information; batch, selection or expression normalization explains the apparent gain.",
+      "benchmark": "Experiment: hold out entire perturbation combinations. Separate new pairs of previously seen genes from previously unseen genes; random cell splitting cannot establish either transfer claim. Keep preprocessing and selected genes within training boundaries.",
+      "decision_contract": "Judgment/meta-test: response-relative error, non-additive residuals and expression-program consistency, avoiding scores dominated by unchanged genes. Cells are not automatically independent biological replicates. Test model-disagreement acquisition against random reveal of a hidden combination pool. This is retrospective replay of real experimental results, not a new wet-lab experiment. Consumption: ranked combinations, evidence strength, uncertainty and a replication proposal; transcriptomic results do not establish clinical effects or feedback topology.",
+      "research_actions": "Judgment/meta-test: response-relative error, non-additive residuals and expression-program consistency, avoiding scores dominated by unchanged genes. Cells are not automatically independent biological replicates. Test model-disagreement acquisition against random reveal of a hidden combination pool. This is retrospective replay of real experimental results, not a new wet-lab experiment. Consumption: ranked combinations, evidence strength, uncertainty and a replication proposal; transcriptomic results do not establish clinical effects or feedback topology.",
+      "adapters": {
+        "load": "not implemented",
+        "fit": "not implemented",
+        "export": "planned"
+      },
+      "source_urls": [
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133344",
+        "https://github.com/broadinstitute/wot"
+      ],
+      "full_specification": "Real evidence: Norman et al. 2019, GEO accession GSE133344, with original author code and a standardized scPerturb file NormanWeissman2019_filtered.h5ad. The full file is roughly 699 MB; prepackage a scientifically justified subset for the sprint. Author repository, standardized dataset record.\n\nSystem/problem DNA: interacting genetic programs produce cell-expression responses. Perturbation pairs can amplify or buffer responses, but observed interaction depends on the measurement scale. The user is a researcher prioritizing informative combinations.\n\nRivals: additive single-perturbation effects explain combinations; low-rank/nonlinear interactions add information; batch, selection or expression normalization explains the apparent gain.\n\nModels/code: explicitly define response relative to control and its scale; compare additive effects, an interaction model and a neural/graph comparator when available. Astra writes perturbation/control alignment, response aggregation, training code and comparison reports. The official GEARS repository provides a Norman loader and comparator; its documentation notes that reliable combination prediction needs some combination data during training. GEARS.\n\nExperiment: hold out entire perturbation combinations. Separate new pairs of previously seen genes from previously unseen genes; random cell splitting cannot establish either transfer claim. Keep preprocessing and selected genes within training boundaries.\n\nJudgment/meta-test: response-relative error, non-additive residuals and expression-program consistency, avoiding scores dominated by unchanged genes. Cells are not automatically independent biological replicates. Test model-disagreement acquisition against random reveal of a hidden combination pool. This is retrospective replay of real experimental results, not a new wet-lab experiment. Consumption: ranked combinations, evidence strength, uncertainty and a replication proposal; transcriptomic results do not establish clinical effects or feedback topology."
+    },
+    {
+      "id": "B2",
+      "title": "Can a model predict changing cell populations while accounting for both state transitions and growth?",
+      "status": "specification_only",
+      "adapter": null,
+      "problem_dna": "System/problem DNA: cell-state distributions change through transitions, proliferation and survival. Different processes can generate similar population snapshots. The application is assessing dynamic models and selecting an informative sampling time.",
+      "evidence_contract": "Real evidence: Schiebinger et al. 2019 reprogramming time course; the authors' Waddington-OT tutorial supplies expression/time metadata and held-out-timepoint analysis for 39 time points across 18 days. Author tutorial, Waddington-OT.",
+      "system_spec": "Models/code: previous-distribution and simple interpolation baselines, transport without differential growth, and growth-aware transport. Astra generates a training-only representation, timepoint splits, inference adapters and distribution comparisons. Use the author workflow as a reproducible comparator when setup is available.",
+      "hypotheses": "Rivals: persistence or simple distribution interpolation is sufficient; transport of cell states explains the change; differential growth materially changes the predicted population distribution.",
+      "benchmark": "Experiment: withhold complete intermediate timepoints and predict their expression distributions and state proportions. Using observations on both sides is interpolation, not forecasting. A separate forward forecast must use earlier observations only. Check sensitivity to growth assumptions and representation choices.",
+      "decision_contract": "Judgment/meta-test: distribution distance, state-proportion error, performance across withheld times and uncertainty from supported replication. Destructive single-cell sampling does not observe the same individual cells over time; inferred paths are not ground-truth lineages. Test whether revealing model-disagreement timepoints improves model-failure detection versus uniform sampling. Consumption: a dynamic comparison report and sampling proposal, with remaining non-identifiability explicit.",
+      "research_actions": "Deferred examples: organismal heat-stress resilience, shared-aquifer governance and pest\u2013predator interventions remain useful research directions, but need suitable outcome evidence and validated couplings before becoming empirical benchmark packs. Their earlier simulated forms are not substitutes for the ten measured-data cases above.",
+      "adapters": {
+        "load": "not implemented",
+        "fit": "not implemented",
+        "export": "planned"
+      },
+      "source_urls": [
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133344",
+        "https://github.com/broadinstitute/wot"
+      ],
+      "full_specification": "Real evidence: Schiebinger et al. 2019 reprogramming time course; the authors' Waddington-OT tutorial supplies expression/time metadata and held-out-timepoint analysis for 39 time points across 18 days. Author tutorial, Waddington-OT.\n\nSystem/problem DNA: cell-state distributions change through transitions, proliferation and survival. Different processes can generate similar population snapshots. The application is assessing dynamic models and selecting an informative sampling time.\n\nRivals: persistence or simple distribution interpolation is sufficient; transport of cell states explains the change; differential growth materially changes the predicted population distribution.\n\nModels/code: previous-distribution and simple interpolation baselines, transport without differential growth, and growth-aware transport. Astra generates a training-only representation, timepoint splits, inference adapters and distribution comparisons. Use the author workflow as a reproducible comparator when setup is available.\n\nExperiment: withhold complete intermediate timepoints and predict their expression distributions and state proportions. Using observations on both sides is interpolation, not forecasting. A separate forward forecast must use earlier observations only. Check sensitivity to growth assumptions and representation choices.\n\nJudgment/meta-test: distribution distance, state-proportion error, performance across withheld times and uncertainty from supported replication. Destructive single-cell sampling does not observe the same individual cells over time; inferred paths are not ground-truth lineages. Test whether revealing model-disagreement timepoints improves model-failure detection versus uniform sampling. Consumption: a dynamic comparison report and sampling proposal, with remaining non-identifiability explicit.\n\nDeferred examples: organismal heat-stress resilience, shared-aquifer governance and pest\u2013predator interventions remain useful research directions, but need suitable outcome evidence and validated couplings before becoming empirical benchmark packs. Their earlier simulated forms are not substitutes for the ten measured-data cases above."
+    }
+  ]
+}

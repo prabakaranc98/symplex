@@ -1,0 +1,73 @@
+{
+  "mode": "execute",
+  "scope_id": "demo_audio_v1",
+  "scope_cap_usd": 0.4,
+  "reservation_usd": 0.3,
+  "ledger_usd": {
+    "cap": 5.0,
+    "used_or_reserved": 4.2043800000000005
+  },
+  "tts_model": "gpt-4o-mini-tts",
+  "transcription_model": "gpt-transcribe",
+  "voice": "coral",
+  "narration_words": 167,
+  "narration_sha256": "484639f3b4e39a042024232ce471a643ae7d599912fcb5e86d62212674d53ea0",
+  "ai_generated_voice": true,
+  "status": "completed",
+  "audio_seconds": 82.15,
+  "audio_sha256": "953db4f97b1f91c05265b62ef1abac5c3c0b9256a55e2d9ce34a6ea94ce8296a",
+  "audio_bytes": 3943244,
+  "speech_artifact_id": "demo_audio_asset_21cf1f3a5c0d45e3",
+  "transcript_artifact_id": "demo_audio_transcript_a7799cac288e46ac",
+  "transcript_similarity": 0.9940476190476191,
+  "similarity_basis": "Normalized word-sequence similarity; not an independent factual evaluation",
+  "accounted_usd": 0.256225,
+  "accounting": {
+    "reservation_id": "c1094c19527440ab895eb193cb58f915",
+    "reserved": {
+      "model_requests": 2,
+      "usd": 0.3
+    },
+    "reported_actual": {
+      "usd": 0.256225,
+      "model_requests": 2
+    },
+    "retained_reservations": {},
+    "over_reservation": {},
+    "exceeded_caps": {},
+    "status": "settled",
+    "scope_id": "demo_audio_v1",
+    "scope_exceeded_caps": {}
+  },
+  "cost_basis": "Conservative speech allocation plus duration-priced transcription; not an invoice",
+  "scope_budget": {
+    "evidence_requests": {
+      "cap": 20.0,
+      "used_or_reserved": 0.0
+    },
+    "input_tokens": {
+      "cap": 250000.0,
+      "used_or_reserved": 0.0
+    },
+    "model_requests": {
+      "cap": 2.0,
+      "used_or_reserved": 2.0
+    },
+    "output_tokens": {
+      "cap": 50000.0,
+      "used_or_reserved": 0.0
+    },
+    "usd": {
+      "cap": 0.4,
+      "used_or_reserved": 0.256225
+    },
+    "worker_seconds": {
+      "cap": 900.0,
+      "used_or_reserved": 0.0
+    }
+  },
+  "ledger_usd_after": {
+    "cap": 5.0,
+    "used_or_reserved": 4.460605
+  }
+}

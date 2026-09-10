@@ -1,0 +1,274 @@
+[
+  {
+    "id": "airport_access_planning",
+    "title": "Urban infrastructure and airport access",
+    "problem": "A regional government wants to understand how a proposed airport and its access network could interact with travel demand, congestion, land use, environmental pressure and unequal access. The agent must establish the geography, alternatives, time horizon and evidence before selecting model families.",
+    "decision_or_estimation_target": "Estimate plausible demand and access outcomes, compare supplied alternatives and identify observations that could reverse their ranking. An exploratory intervention comparison does not establish site feasibility.",
+    "representations": [
+      "Typed transport, population and land-use entities with spatial and temporal alignment",
+      "A network/accessibility model coupled to a demand or behavioral model when evidence supports that coupling",
+      "Environmental constraints and uncertain exogenous scenarios with distinct provenance"
+    ],
+    "required_inputs": [
+      "Candidate footprints and access proposals with source, coordinate system and date",
+      "Observed travel times, counts, origin-destination or survey information and missingness",
+      "Population, land use, environmental observations and actual planning constraints",
+      "User judgments about access, cost, distributional effects and acceptable uncertainty"
+    ],
+    "compute_requirements": [
+      "Network and time-series profiling; probe graph/numerical libraries in the execution environment",
+      "Paired stochastic demand scenarios, rival mechanism comparisons and sensitivity tests",
+      "SUMO/TraCI or another calibrated traffic backend only after adapter and input validation"
+    ],
+    "validation_requirements": [
+      "Coordinate, time, unit and population-denominator consistency",
+      "Baseline travel-time/flow reproduction and independent temporal or geographic assessment",
+      "Conservation and numerical checks; uncertainty about behavior separated from random traffic variation",
+      "Independent environmental and engineering review before feasibility conclusions"
+    ],
+    "visualizations": [
+      "Source-linked access maps and network diagrams",
+      "Demand/traffic trajectories with the meaning of each uncertainty range",
+      "Alternative comparison by outcome and affected group",
+      "Model-coupling and evidence-gap views"
+    ],
+    "current_scope": "Generic agent framing, system contracts, evidence synthesis and bounded hosted Python can investigate supplied inputs and produce conditional comparisons. This brief contains no chosen site, precomputed forecast or installed traffic simulator claim.",
+    "dependency_gaps": [
+      "Local evidence and explicit candidate definitions must be supplied or acquired through admitted connectors",
+      "OSMnx/SUMO adapters and specialist simulator execution require implementation and capability checks",
+      "Engineering feasibility and causal policy effects require additional validation"
+    ],
+    "resources": [
+      {"title": "Eclipse SUMO traffic simulation documentation", "url": "https://sumo.dlr.de/docs/"},
+      {"title": "SUMO TraCI Python interface", "url": "https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.html"},
+      {"title": "OSMnx network modeling documentation", "url": "https://osmnx.readthedocs.io/en/stable/"}
+    ]
+  },
+  {
+    "id": "enzyme_deficiency_research",
+    "title": "Cellular responses and enzyme-deficiency research",
+    "problem": "A research team wants to compare explanations of cellular responses, including an enzyme-deficiency extension when relevant. The agent must distinguish pathway, cellular and organismal scales and identify evidence needed to justify any connection between them.",
+    "decision_or_estimation_target": "Compare mechanistic hypotheses, estimate uncertainty where parameters are identifiable and identify a discriminating validation target. The output is a research model and evidence assessment, not medical advice or a treatment/protein-design instruction.",
+    "representations": [
+      "Semantic pathway and observation model with measured, latent and assumed quantities",
+      "Reaction-network or compartment dynamics with explicit conservation assumptions",
+      "An observation/error model and, where justified, cross-scale coupling to recovery outcomes"
+    ],
+    "required_inputs": [
+      "Published models, provenance, assay or observational data and their measurement limits",
+      "Declared biological scale, perturbation context, time horizon and recovery endpoint",
+      "Parameter units, uncertainty, missingness and population applicability",
+      "Independent research evidence for proposed cross-scale mechanisms"
+    ],
+    "compute_requirements": [
+      "Reproduce an admitted reference model before interpreting changes",
+      "Probe numerical solvers; compare rival dynamics, parameter identifiability and sensitivity",
+      "Use SBML/SED-ML-compatible or molecular backends only when actually available and appropriate"
+    ],
+    "validation_requirements": [
+      "Model provenance, units, mass balance, solver tolerances and convergence",
+      "Separate model reproduction from independent biological validation",
+      "Distinguish parameter uncertainty, structural discrepancy and measurement noise",
+      "Do not infer organism-level efficacy or resilience from a structure or synthetic trajectory"
+    ],
+    "visualizations": [
+      "Pathway and cross-scale hypothesis graphs",
+      "Observed versus modeled response with source and basis labels",
+      "Sensitivity and identifiability diagnostics",
+      "Optional structure viewer for an admitted structure, separate from functional claims"
+    ],
+    "current_scope": "The generic engine can frame the research, synthesize supplied evidence and execute exploratory numerical models with explicit assumptions. No enzyme intervention, molecular design or clinically valid result is precomputed.",
+    "dependency_gaps": [
+      "Suitable reference models and independent biological evidence are required",
+      "OpenMM was unavailable in the recorded hosted probe; a specialist adapter is required",
+      "SBML/SED-ML execution and cross-scale validity must be checked for the selected model"
+    ],
+    "resources": [
+      {"title": "EMBL-EBI BioModels and curation scope", "url": "https://www.ebi.ac.uk/training/online/courses/biomodels-quick-tour/what-is-biomodels/"},
+      {"title": "COMBINE biological modeling standards", "url": "https://co.mbine.org/standards/"},
+      {"title": "OpenMM user and theory guide", "url": "https://docs.openmm.org/latest/userguide/"}
+    ]
+  },
+  {
+    "id": "prediction_markets",
+    "title": "Prediction markets and event uncertainty",
+    "problem": "An analyst wants to understand whether market-implied probabilities and evidence-based forecasts reliably describe a precisely defined set of events. The agent must reconcile settlement semantics, event dependence, source availability and rival forecasting explanations before computing comparisons.",
+    "decision_or_estimation_target": "Estimate event uncertainty, compare forecasts with raw-price and simple reference baselines, and assess calibration where independent outcomes exist. Market creation, demand estimation, optimization, reinforcement learning and mechanism design remain future extensions.",
+    "representations": [
+      "Events, settlement rules, thresholds and first-availability times in a semantic contract",
+      "Probabilistic temporal or hierarchical forecasts with explicit event dependencies",
+      "A source and market-observation process separated from the latent event outcome"
+    ],
+    "required_inputs": [
+      "Forecast or market snapshots with settlement definitions, observation and availability timestamps",
+      "Resolved outcomes, event-group identities and the intended forecast cutoff",
+      "Source-linked evidence and definition changes with point-in-time provenance",
+      "Market coverage, missingness and relevant economic context with vintage"
+    ],
+    "compute_requirements": [
+      "Semantic admission, timestamp checks and simple reference forecasts before added model complexity",
+      "Probabilistic estimation, prediction checks and sensitivity to missing or dependent events",
+      "Probe PyMC or other selected inference libraries before requesting their use"
+    ],
+    "validation_requirements": [
+      "Temporal holdout and availability checks with dependent contracts kept in the same event group",
+      "Compare the same eligible forecasts using a frozen proper scoring rule and reference baseline",
+      "Check calibration only on eligible independent outcomes and report sampling limits",
+      "Retain unresolved settlement-definition, selection and source-dependence uncertainty"
+    ],
+    "visualizations": [
+      "Forecast trajectories with evidence and resolution timelines",
+      "Reliability and proper-score comparisons where observed outcomes support them",
+      "Competing model comparisons with data and assumption lineage",
+      "Evidence gaps and the next discriminating measurement"
+    ],
+    "current_scope": "Generic framing, evidence synthesis and bounded hosted inference over supplied data. The narrow prepared P1 adapter supplies semantic admission and host scoring for eligible threshold-event packs; broader markets require new admitted contracts. No forecast, investment recommendation or market mechanism is precomputed.",
+    "dependency_gaps": [
+      "A real point-in-time forecast archive with settlement rules and independent outcomes is needed",
+      "PyMC availability must be confirmed in the selected execution environment",
+      "Market-platform and World Bank acquisition still need admitted scoped connectors",
+      "Market creation, demand estimation, optimization, reinforcement learning and mechanism design are future extensions"
+    ],
+    "resources": [
+      {"title": "PyMC probabilistic modeling overview", "url": "https://www.pymc.io/projects/docs/en/stable/learn/core_notebooks/pymc_overview.html"},
+      {"title": "World Bank Indicators API for economic context", "url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation"}
+    ]
+  },
+  {
+    "id": "geopolitical_scenario_uncertainty",
+    "title": "Geopolitical and economic exposure",
+    "problem": "An analyst wants to understand possible political, economic and humanitarian developments across a defined region and horizon. The agent must distinguish reported events, source coverage, delayed coding, strategic assumptions and rival scenario mechanisms.",
+    "decision_or_estimation_target": "Produce scoped scenario or forecast comparisons, identify leading uncertainties and state which observations would change the assessment. This is strategic analysis, without tactical military planning or targeting.",
+    "representations": [
+      "Versioned actor, institution, event and economic dependency graphs",
+      "A source/reporting process separated from latent real-world events",
+      "Probabilistic temporal or scenario models with explicit rival mechanisms"
+    ],
+    "required_inputs": [
+      "Defined region, horizon, outcomes and decision context",
+      "Versioned event data, original source references and publication/availability timestamps",
+      "Economic and institutional indicators with definition changes recorded",
+      "User judgments and scenario assumptions separated from empirical evidence"
+    ],
+    "compute_requirements": [
+      "Entity reconciliation, duplicate/reporting-dependence inspection and temporal alignment",
+      "Baseline forecasts, retrospective evaluation and conditional scenario sensitivity",
+      "Bounded graph/probabilistic computation with unavailable data recorded as gaps"
+    ],
+    "validation_requirements": [
+      "Point-in-time availability and no retrospective knowledge leakage",
+      "Holdouts by time or event family with dependency-aware comparisons",
+      "Document reporting bias, changing definitions and unresolved source disagreement",
+      "No scenario probability without a stated estimation and calibration basis"
+    ],
+    "visualizations": [
+      "Source-linked event timelines and actor/dependency graphs",
+      "Scenario branches with observable triggers",
+      "Forecast verification and disagreement views",
+      "Optional coarse spatial summaries for the stated analytical scope"
+    ],
+    "current_scope": "The engine can synthesize evidence, represent rival explanations and compute exploratory comparisons from admitted data. This is an investigation brief, not a precomputed forecast or a tactical system.",
+    "dependency_gaps": [
+      "UCDP API access requires a requested token and versioned acquisition adapter",
+      "GDELT and World Bank connectors are not currently installed as domain adapters",
+      "News mentions are not independent ground-truth events; source assessment remains necessary"
+    ],
+    "resources": [
+      {"title": "Uppsala Conflict Data Program API and codebooks", "url": "https://ucdp.uu.se/apidocs/"},
+      {"title": "GDELT event and news-derived data documentation", "url": "https://gdeltproject.org/data.html"},
+      {"title": "World Bank Indicators API", "url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation"}
+    ]
+  },
+  {
+    "id": "climate_agriculture_ecology",
+    "title": "Climate, agriculture and ecological systems",
+    "problem": "A team wants to understand how climate drivers, water, ecological dynamics and human activities interact. A Hudson River ecology/community investigation is one concrete example; an agricultural question may instead require soil, crop and management observations. The agent must establish relevant spatial, seasonal and social scales before choosing mechanisms.",
+    "decision_or_estimation_target": "Estimate and compare ecological, water-state or agricultural outcomes, test plausible coupling mechanisms and identify missing observations. The Hudson example connects river state and community exposure; exploratory interventions remain conditional on the selected model and evidence.",
+    "representations": [
+      "Climate and hydrological states coupled to ecological, crop or human-use observations as relevant",
+      "Spatial units, monitoring stations, communities and shared reference clocks; river reaches for the Hudson example",
+      "Mechanistic or stochastic dynamics with an explicit sensor and reporting process"
+    ],
+    "required_inputs": [
+      "Weather, water-quality or flow observations with station metadata, QA flags and units",
+      "River geometry, temporal support, tidal or seasonal context and source provenance",
+      "Ecological or soil/crop observations and aggregate human-use/exposure data at compatible scales",
+      "User priorities and proposed actions, clearly separated from measured effects"
+    ],
+    "compute_requirements": [
+      "Station/time alignment, missingness inspection and quality-control-aware profiling",
+      "Probe numerical and labeled-array tools; compare rival state/observation models",
+      "Replicated scenarios, conservation checks and uncertainty propagation across couplings"
+    ],
+    "validation_requirements": [
+      "Sensor calibration and QA flags, unit consistency and valid temporal aggregation",
+      "Seasonal and station holdouts; dependence among nearby sensors retained",
+      "Mass balance and numerical stability where implied by the selected model",
+      "Do not infer community exposure or causal ecological change from a single proxy"
+    ],
+    "visualizations": [
+      "Source-linked station/reach maps and ecological/social coupling graphs",
+      "Aligned river and weather time series with QA/missingness overlays",
+      "Model/data comparisons and seasonal uncertainty",
+      "Community-level trade-offs and discriminating evidence gaps"
+    ],
+    "current_scope": "The generic engine can work with supplied monitoring exports, synthesize source disagreements and create scoped model comparisons. HRECOS/USGS are resource candidates for the Hudson example, not agricultural datasets. No calibrated ecosystem/crop model, ecological conclusion or public-health recommendation is preloaded.",
+    "dependency_gaps": [
+      "HRECOS offers live views and a data-request path; bulk records have not been acquired",
+      "USGS OGC/STAC acquisition and xarray integration require scoped adapters and capability checks",
+      "A hydrodynamic, ecological or crop specialist backend and case-specific data may be needed beyond exploratory Python",
+      "Social and ecological measurements require compatible scale and provenance"
+    ],
+    "resources": [
+      {"title": "HRECOS Hudson monitoring and data access", "url": "https://hrecos.org/"},
+      {"title": "USGS Water Data API documentation", "url": "https://api.waterdata.usgs.gov/docs/"},
+      {"title": "Xarray labeled multidimensional data", "url": "https://docs.xarray.dev/en/stable/"}
+    ]
+  },
+  {
+    "id": "city_population_social_simulation",
+    "title": "City population and social dynamics",
+    "problem": "A city team wants to understand how population change, housing, mobility, services and heterogeneous behavior interact. The agent must decide which mechanisms and scales are necessary, using aggregate evidence and explicitly labeled synthetic populations where appropriate.",
+    "decision_or_estimation_target": "Estimate population/service-demand outcomes and compare model explanations or supplied scenarios. A 3D scene should help inspect computed results, not manufacture realism or imply individual-level prediction.",
+    "representations": [
+      "Cohorts, neighborhoods, households or synthetic agents with declared aggregation rules",
+      "Demographic state transitions coupled to housing, mobility or service-demand mechanisms",
+      "Network or agent-based behavior only when its assumptions and observations are explicit"
+    ],
+    "required_inputs": [
+      "Population, housing and social estimates with survey uncertainty and geographic vintage",
+      "Aggregate flows, service observations and land-use geometry with units and dates",
+      "Behavioral evidence, transition assumptions and synthetic-population construction provenance",
+      "User-selected outcomes, comparison horizon and distributional priorities"
+    ],
+    "compute_requirements": [
+      "Baseline cohort or flow model before introducing heterogeneous-agent complexity",
+      "Replicated simulations with declared schedules, seeds and sampling assumptions",
+      "Mesa or another ABM backend requires actual availability; 3D rendering is a separate adapter"
+    ],
+    "validation_requirements": [
+      "Population accounting, unit/time alignment and plausible transition bounds",
+      "Validate aggregate and subgroup observables against independent evidence",
+      "Sensitivity to behavioral rules and update order; preserve model disagreement",
+      "Keep simulated agents distinct from observed people and illustrative geometry distinct from surveys"
+    ],
+    "visualizations": [
+      "Cohort/population flow diagrams and subgroup trajectories",
+      "Neighborhood comparison maps with uncertainty and data vintage",
+      "Optional 3D extrusions or movement playback derived from admitted geometry and computed outputs",
+      "Behavioral assumptions, model diagnostics and evidence lineage"
+    ],
+    "current_scope": "Agent framing, typed system representation, evidence synthesis and bounded hosted computation over supplied inputs. Advanced 3D rendering and a calibrated city ABM are extension targets, not installed capabilities or precomputed simulations.",
+    "dependency_gaps": [
+      "Census API queries require a key; geography/vintage mapping and an acquisition adapter are needed",
+      "Mesa was unavailable in the recorded hosted probe",
+      "deck.gl/3D scene integration is not installed in the current frontend",
+      "Behavioral calibration and independent city-specific evidence are required"
+    ],
+    "resources": [
+      {"title": "Census ACS 5-year data and API requirements", "url": "https://www.census.gov/data/developers/data-sets/acs-5year.html"},
+      {"title": "Mesa agent-based modeling documentation", "url": "https://mesa.readthedocs.io/stable/"},
+      {"title": "deck.gl visualization framework", "url": "https://deck.gl/docs"}
+    ]
+  }
+]

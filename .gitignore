@@ -129,6 +129,11 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+!.env.example
+.symplex/
+.symplex-campaign/
+data/
 .venv
 env/
 venv/

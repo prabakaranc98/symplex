@@ -1,0 +1,52 @@
+{
+  "id": "social_simulation",
+  "name": "Social systems",
+  "cases": [
+    {
+      "id": "S1",
+      "title": "Which network mechanisms predict newly expressed distrust?",
+      "status": "specification_only",
+      "adapter": null,
+      "problem_dna": "System/problem DNA: users rate one another, altering a reputation graph that may affect later interactions. Reciprocity, signed triangles, concentration and recency are candidate mechanisms. The application is reputation-system reliability assessment and prioritization of human review.",
+      "evidence_contract": "Real evidence: Stanford SNAP provides Bitcoin OTC and Alpha timestamped, directed user ratings from \u221210 to +10. Alpha can serve as a second-platform transfer comparison. Ratings measure expressed trust, not verified fraud or private beliefs. Bitcoin OTC, Bitcoin Alpha.",
+      "system_spec": "Models/code: start with shrunk recipient reputation and regularized logistic/boosted models using historical activity, negativity, degree and recency. Generate a competing signed temporal-graph model, leakage-safe feature builder and evaluator; a stochastic agent model is an optional hypothesis-testing extension.",
+      "hypotheses": "Rivals: stable rater harshness and recipient reputation explain outcomes; reciprocal/local network structure adds information; recent distrust propagates after controlling for activity and history. Influence is a hypothesis, not an observed causal fact.",
+      "benchmark": "Experiment: predict whether the next recorded rating is negative, conditional on its rater\u2013recipient pair being known. Split chronological blocks, group equal-time records and compute graph features strictly from the past. Test platform transfer without assuming shared identities. This target does not predict whether a transaction or rating occurs.",
+      "decision_contract": "Judgment/meta-test: compare held-out log loss, Brier score, negative-class PR-AUC, calibration and cold starts. Test whether analyzing disagreement between reputation-only and network models improves the investigation policy under equal budgets. Consumption: export a reliability report and review queue with reasons; intervention effects on a real reputation system remain unvalidated.",
+      "research_actions": "Judgment/meta-test: compare held-out log loss, Brier score, negative-class PR-AUC, calibration and cold starts. Test whether analyzing disagreement between reputation-only and network models improves the investigation policy under equal budgets. Consumption: export a reliability report and review queue with reasons; intervention effects on a real reputation system remain unvalidated.",
+      "adapters": {
+        "load": "not implemented",
+        "fit": "not implemented",
+        "export": "planned"
+      },
+      "source_urls": [
+        "https://snap.stanford.edu/data/soc-sign-bitcoin-otc.html",
+        "https://snap.stanford.edu/data/soc-RedditHyperlinks.html"
+      ],
+      "full_specification": "Real evidence: Stanford SNAP provides Bitcoin OTC and Alpha timestamped, directed user ratings from \u221210 to +10. Alpha can serve as a second-platform transfer comparison. Ratings measure expressed trust, not verified fraud or private beliefs. Bitcoin OTC, Bitcoin Alpha.\n\nSystem/problem DNA: users rate one another, altering a reputation graph that may affect later interactions. Reciprocity, signed triangles, concentration and recency are candidate mechanisms. The application is reputation-system reliability assessment and prioritization of human review.\n\nRivals: stable rater harshness and recipient reputation explain outcomes; reciprocal/local network structure adds information; recent distrust propagates after controlling for activity and history. Influence is a hypothesis, not an observed causal fact.\n\nModels/code: start with shrunk recipient reputation and regularized logistic/boosted models using historical activity, negativity, degree and recency. Generate a competing signed temporal-graph model, leakage-safe feature builder and evaluator; a stochastic agent model is an optional hypothesis-testing extension.\n\nExperiment: predict whether the next recorded rating is negative, conditional on its rater\u2013recipient pair being known. Split chronological blocks, group equal-time records and compute graph features strictly from the past. Test platform transfer without assuming shared identities. This target does not predict whether a transaction or rating occurs.\n\nJudgment/meta-test: compare held-out log loss, Brier score, negative-class PR-AUC, calibration and cold starts. Test whether analyzing disagreement between reputation-only and network models improves the investigation policy under equal budgets. Consumption: export a reliability report and review queue with reasons; intervention effects on a real reputation system remain unvalidated."
+    },
+    {
+      "id": "S2",
+      "title": "Can feedback between communities improve forecasts of moderation workload?",
+      "status": "specification_only",
+      "adapter": null,
+      "problem_dna": "System/problem DNA: links between communities may trigger reciprocal linking and bursts of attention. Community activity, stable relationships and common external shocks interact. The measurable target is incoming negative-labeled links over the next seven days for communities selected using training-period activity.",
+      "evidence_contract": "Real evidence: SNAP's Reddit Hyperlink Network contains timestamped community-to-community links. Its label distinguishes explicitly negative (\u22121) from neutral or positive (+1); labels combine crowdsourcing and a text classifier. They are imperfect observable proxies. Dataset and label definitions.",
+      "system_spec": "Models/code: recency-weighted counts and regularized negative-binomial baselines; a competing temporal-network/self-exciting model with an explicit common-driver alternative. Astra writes deduplication, time-safe features, simulation/inference adapters and forecasts.",
+      "hypotheses": "Rivals: persistent community/pair tendencies and activity explain counts; reciprocal excitation adds predictive information; common shocks explain apparent contagion.",
+      "benchmark": "Experiment: rolling temporal evaluation with target windows wholly contained in each split. Deduplicate overlapping title/body records by source, target and post ID. Exclude all-period embeddings unless rebuilt only from training data. Compare under the same timeline and target definition.",
+      "decision_contract": "Judgment/meta-test: predictive count score/deviance, absolute error and interval coverage, stratified by community activity. Test whether examining stable hostility and common drivers before adding feedback improves predictive quality and avoids unsupported causal claims. Consumption: a workload forecast and review-priority artifact; negative links do not directly measure harassment, polarization or psychological state. Policy interventions require additional causal evidence.",
+      "research_actions": "Judgment/meta-test: predictive count score/deviance, absolute error and interval coverage, stratified by community activity. Test whether examining stable hostility and common drivers before adding feedback improves predictive quality and avoids unsupported causal claims. Consumption: a workload forecast and review-priority artifact; negative links do not directly measure harassment, polarization or psychological state. Policy interventions require additional causal evidence.",
+      "adapters": {
+        "load": "not implemented",
+        "fit": "not implemented",
+        "export": "planned"
+      },
+      "source_urls": [
+        "https://snap.stanford.edu/data/soc-sign-bitcoin-otc.html",
+        "https://snap.stanford.edu/data/soc-RedditHyperlinks.html"
+      ],
+      "full_specification": "Real evidence: SNAP's Reddit Hyperlink Network contains timestamped community-to-community links. Its label distinguishes explicitly negative (\u22121) from neutral or positive (+1); labels combine crowdsourcing and a text classifier. They are imperfect observable proxies. Dataset and label definitions.\n\nSystem/problem DNA: links between communities may trigger reciprocal linking and bursts of attention. Community activity, stable relationships and common external shocks interact. The measurable target is incoming negative-labeled links over the next seven days for communities selected using training-period activity.\n\nRivals: persistent community/pair tendencies and activity explain counts; reciprocal excitation adds predictive information; common shocks explain apparent contagion.\n\nModels/code: recency-weighted counts and regularized negative-binomial baselines; a competing temporal-network/self-exciting model with an explicit common-driver alternative. Astra writes deduplication, time-safe features, simulation/inference adapters and forecasts.\n\nExperiment: rolling temporal evaluation with target windows wholly contained in each split. Deduplicate overlapping title/body records by source, target and post ID. Exclude all-period embeddings unless rebuilt only from training data. Compare under the same timeline and target definition.\n\nJudgment/meta-test: predictive count score/deviance, absolute error and interval coverage, stratified by community activity. Test whether examining stable hostility and common drivers before adding feedback improves predictive quality and avoids unsupported causal claims. Consumption: a workload forecast and review-priority artifact; negative links do not directly measure harassment, polarization or psychological state. Policy interventions require additional causal evidence."
+    }
+  ]
+}

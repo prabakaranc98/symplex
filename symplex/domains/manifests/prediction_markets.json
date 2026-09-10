@@ -1,0 +1,50 @@
+{
+  "id": "prediction_markets",
+  "name": "Prediction markets",
+  "cases": [
+    {
+      "id": "P1",
+      "title": "Do logically linked markets produce more reliable forecasts when modeled together?",
+      "status": "adapter_ready_awaiting_data",
+      "adapter": "p1_prepared",
+      "problem_dna": "System/problem DNA: related event contracts form a probability-constraint graph; price observations evolve over time under shared information and market activity. Settlement definitions, time zones and measurement locations are part of the model. The useful output is a reliability/consistency audit for a forecast desk.",
+      "evidence_contract": "Real evidence: contract definitions, event groups, timestamped bid/ask or transaction summaries and final resolution labels from Kalshi. The official documentation provides public market endpoints and an archived-market candlestick route; select a complete small archive before the sprint. Market-data guide, historical candlesticks.",
+      "system_spec": "Model/code/integration: Astra extracts proposed event predicates and matches them to exact source spans. Deterministic checks validate comparisons. Generate a temporal graph estimator or constrained probability projection and connect it to point-in-time observations. For matching events, P(Tmax > 90 F) <= P(Tmax > 85 F); sum-to-one requires a complete mutually exclusive partition.",
+      "hypotheses": "Rival hypotheses: shared event structure improves estimates; apparent violations are explained by different definitions, stale observations or spreads. Public prices alone do not identify individual trader beliefs or herding.",
+      "benchmark": "Experiment and baseline: compare raw price proxies, a fixed manually validated constraint baseline and the proposed method. Reserve complete event/date groups chronologically; fit transformations only on earlier groups. Include deliberate near-matches that should not be joined.",
+      "decision_contract": "Verification/judgment: compute Brier/log loss against actual resolutions, false relation flags, calibration diagnostics and coverage. Coherence is a separate score and cannot stand in for accuracy. Quotes are price proxies, not guaranteed calibrated probabilities. An apparent midpoint inconsistency is not demonstrated executable arbitrage.",
+      "research_actions": "Meta-test and consumption: test whether checking definitions before extra data collection reduces false flags per call. Export a graph of comparable events, forecast differences, confidence limits where justified and unresolved comparisons. Historical LLM outcome memorization remains a limitation; prospective saved forecasts give stronger evidence of forecasting skill. No trades are required.",
+      "adapters": {
+        "load": "prepared P1 JSON",
+        "fit": "scalar calibrator",
+        "export": "JSON decision"
+      },
+      "source_urls": [
+        "https://docs.kalshi.com/"
+      ],
+      "full_specification": "Real evidence: contract definitions, event groups, timestamped bid/ask or transaction summaries and final resolution labels from Kalshi. The official documentation provides public market endpoints and an archived-market candlestick route; select a complete small archive before the sprint. Market-data guide, historical candlesticks.\n\nSystem/problem DNA: related event contracts form a probability-constraint graph; price observations evolve over time under shared information and market activity. Settlement definitions, time zones and measurement locations are part of the model. The useful output is a reliability/consistency audit for a forecast desk.\n\nRival hypotheses: shared event structure improves estimates; apparent violations are explained by different definitions, stale observations or spreads. Public prices alone do not identify individual trader beliefs or herding.\n\nModel/code/integration: Astra extracts proposed event predicates and matches them to exact source spans. Deterministic checks validate comparisons. Generate a temporal graph estimator or constrained probability projection and connect it to point-in-time observations. For matching events, P(Tmax > 90 F) <= P(Tmax > 85 F); sum-to-one requires a complete mutually exclusive partition.\n\nExperiment and baseline: compare raw price proxies, a fixed manually validated constraint baseline and the proposed method. Reserve complete event/date groups chronologically; fit transformations only on earlier groups. Include deliberate near-matches that should not be joined.\n\nVerification/judgment: compute Brier/log loss against actual resolutions, false relation flags, calibration diagnostics and coverage. Coherence is a separate score and cannot stand in for accuracy. Quotes are price proxies, not guaranteed calibrated probabilities. An apparent midpoint inconsistency is not demonstrated executable arbitrage.\n\nMeta-test and consumption: test whether checking definitions before extra data collection reduces false flags per call. Export a graph of comparable events, forecast differences, confidence limits where justified and unresolved comparisons. Historical LLM outcome memorization remains a limitation; prospective saved forecasts give stronger evidence of forecasting skill. No trades are required."
+    },
+    {
+      "id": "P2",
+      "title": "When do low activity and stale observations make forecasts unreliable?",
+      "status": "specification_only",
+      "adapter": null,
+      "problem_dna": "System and rivals: forecasts, market activity and information arrival co-evolve across related events. H1\u2014reliability varies with quote age and activity; H2\u2014event difficulty, category and time-to-resolution explain the same association. The application is to flag forecasts requiring additional evidence.",
+      "evidence_contract": "Real evidence: reuse resolved event families and their timestamped observations, volumes/activity indicators and bid/ask information where provided. Verify field semantics and coverage for the chosen archive; do not infer historical order-book depth from candlestick volume.",
+      "system_spec": "Models/code: hierarchical calibration or a regime-dependent stochastic time-series model with event-family effects; optional nonlinear residual; explicit temporal restrictions. Generate snapshot construction, missingness checks, stratified evaluation and a report.",
+      "hypotheses": "System and rivals: forecasts, market activity and information arrival co-evolve across related events. H1\u2014reliability varies with quote age and activity; H2\u2014event difficulty, category and time-to-resolution explain the same association. The application is to flag forecasts requiring additional evidence.",
+      "benchmark": "Experiment: compare raw price, pooled calibration and an activity-aware model on later complete events. Prespecify observation horizons so near-resolution observations do not dominate the result; use event-level resampling and category-held-out sensitivity checks.",
+      "decision_contract": "Judgment: held-out loss, reliability by activity regime, uncertainty and useful coverage. Predictive association does not prove that increasing liquidity would improve accuracy. An agent-based explanation may be explored but is not identified by these observations alone.",
+      "research_actions": "Meta/decision: evaluate whether metadata-quality auditing before model expansion improves held-out forecast reliability under a fixed investigation budget. Deliver a data-quality/reliability panel and a conditional request for additional information, with the reason and potential effect on the decision.",
+      "adapters": {
+        "load": "not implemented",
+        "fit": "not implemented",
+        "export": "planned"
+      },
+      "source_urls": [
+        "https://docs.kalshi.com/"
+      ],
+      "full_specification": "Real evidence: reuse resolved event families and their timestamped observations, volumes/activity indicators and bid/ask information where provided. Verify field semantics and coverage for the chosen archive; do not infer historical order-book depth from candlestick volume.\n\nSystem and rivals: forecasts, market activity and information arrival co-evolve across related events. H1\u2014reliability varies with quote age and activity; H2\u2014event difficulty, category and time-to-resolution explain the same association. The application is to flag forecasts requiring additional evidence.\n\nModels/code: hierarchical calibration or a regime-dependent stochastic time-series model with event-family effects; optional nonlinear residual; explicit temporal restrictions. Generate snapshot construction, missingness checks, stratified evaluation and a report.\n\nExperiment: compare raw price, pooled calibration and an activity-aware model on later complete events. Prespecify observation horizons so near-resolution observations do not dominate the result; use event-level resampling and category-held-out sensitivity checks.\n\nJudgment: held-out loss, reliability by activity regime, uncertainty and useful coverage. Predictive association does not prove that increasing liquidity would improve accuracy. An agent-based explanation may be explored but is not identified by these observations alone.\n\nMeta/decision: evaluate whether metadata-quality auditing before model expansion improves held-out forecast reliability under a fixed investigation budget. Deliver a data-quality/reliability panel and a conditional request for additional information, with the reason and potential effect on the decision."
+    }
+  ]
+}

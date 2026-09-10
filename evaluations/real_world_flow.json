@@ -1,0 +1,50 @@
+{
+  "name": "Complex-system investigation flow campaign",
+  "version": 1,
+  "scope": "Four live agent investigations. Software/decision-support usefulness evaluation, not scientific or predictive accuracy certification.",
+  "depth": "balanced",
+  "proposed_additional_budget_usd": 20,
+  "cases": [
+    {
+      "id": "data_center",
+      "title": "Data-center siting and regional impacts",
+      "problem": "Investigate how a new data-center development could affect regional electricity, water, heat, land use and infrastructure. Establish a bounded public-data example, distinguish site-selection uncertainty from operational impacts, construct rival system explanations and compare conditional scenarios. Do not invent available grid capacity or present a real site as approved."
+    },
+    {
+      "id": "hudson_ecology",
+      "title": "Hudson River ecology and organismal response",
+      "problem": "Investigate how river conditions, watershed inputs, infrastructure and selected organismal/ecological responses interact in a bounded Hudson River research question. Establish observables, scales, rival mechanisms and measurement limitations; use cited public evidence where available. Compare explicit conditional scenarios while distinguishing synthetic tests from calibrated ecological predictions."
+    },
+    {
+      "id": "midterms",
+      "title": "US midterm election event forecasting",
+      "problem": "Construct an accountable forecast investigation for an exactly defined aggregate outcome of the 2026 US midterm elections. Establish event semantics, resolution source, information cutoff, baselines, dependencies, observation uncertainty and update triggers. Use dated public evidence where available. Do not claim future-outcome validation, invent polls or offer political targeting/persuasion."
+    },
+    {
+      "id": "protein",
+      "title": "Protein and digestive-enzyme system modeling",
+      "problem": "Construct a research modeling investigation into digestive-enzyme activity, stability, delivery and assay measurement. Separate molecular, kinetic and organism-level questions; propose rival mechanisms and a testable observation model. Use cited public models/evidence where available. Missing assays must remain gaps; synthetic simulation must not be described as clinical efficacy or a validated protein product."
+    }
+  ],
+  "shared_context": "Evaluation charter: Astra owns framing, evidence acquisition, representation, modeling, code and next-step decisions. Use a small explicitly bounded demonstrator to exercise the investigation loop. When real measurements are missing, a clearly labeled synthetic experiment may test numerical/inference behavior, but retain the real-world validation gap. Do not manufacture observed data, confidence, successful tests or unavailable tools. Preserve failed candidates and scope-changing revisions. Produce actual reusable outputs and a decision brief or a precise blocking evidence requirement. No real-world intervention or external communications are authorized.",
+  "milestones": [
+    "problem_dna",
+    "complex_system",
+    "experiment_protocol",
+    "compute_package",
+    "experiment_comparison",
+    "model_critique",
+    "decision_brief"
+  ],
+  "review_axes": [
+    "problem and endpoint specificity",
+    "rival testability and semantic consistency",
+    "source comparability and provenance",
+    "executed model and reproducibility",
+    "diagnostics versus independent validation",
+    "uncertainty and limits",
+    "output and visualization usefulness",
+    "meaningful next action"
+  ],
+  "case_budget_usd": 5
+}

@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "profiles": {
+    "focused": {
+      "steps": 8,
+      "revisions": 1,
+      "research": 2,
+      "permissions": [
+        "artifacts.read",
+        "compute.trusted",
+        "model.propose",
+        "network.dataset",
+        "network.research",
+        "compute.hosted"
+      ],
+      "reasoning_effort": "low"
+    },
+    "balanced": {
+      "steps": 16,
+      "revisions": 2,
+      "research": 4,
+      "permissions": [
+        "artifacts.read",
+        "compute.trusted",
+        "model.propose",
+        "network.dataset",
+        "network.research",
+        "compute.hosted"
+      ],
+      "reasoning_effort": "medium"
+    },
+    "thorough": {
+      "steps": 24,
+      "revisions": 4,
+      "research": 6,
+      "permissions": [
+        "artifacts.read",
+        "compute.trusted",
+        "model.propose",
+        "network.dataset",
+        "network.research",
+        "compute.hosted"
+      ],
+      "reasoning_effort": "high"
+    }
+  }
+}

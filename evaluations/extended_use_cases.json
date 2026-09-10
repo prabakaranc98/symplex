@@ -1,0 +1,88 @@
+{
+  "name": "Extended anonymized complex-system and agent-workflow cases A–K",
+  "version": 1,
+  "scope": "Planning inventory derived from the user's eleven anonymized use cases. This file grants no execution or additional spending. Any selected live case must use a separately authorized existing global ledger and cumulative case allocation. Evaluate demonstrated software and decision-support behavior; do not adopt the source brief's fit ratings as established performance.",
+  "depth": "balanced",
+  "proposed_additional_budget_usd": 0,
+  "case_budget_usd": 5,
+  "cases": [
+    {
+      "id": "a_infrastructure_mitigation",
+      "title": "A. Closed-loop infrastructure mitigation",
+      "problem": "Investigate a bounded infrastructure-mitigation question in which perception, operational intervention, environmental response and later perception form a feedback loop. Establish a decision owner, an observable endpoint, weather and infrastructure boundaries, telemetry limitations, intervention timing and rival explanations for apparent improvement. Compare conditional mitigation and observation choices with an explicit baseline. Use public or properly labeled anonymized/proxy fixtures when operational records are unavailable; distinguish simulation from observed intervention effects. Do not operate infrastructure or claim an unperformed field intervention."
+    },
+    {
+      "id": "b_fleet_electrification",
+      "title": "B. Urban fleet electrification economics",
+      "problem": "Frame and investigate a bounded urban-fleet electrification decision linking vehicle utilization, charging access, energy tariffs, service demand, financing and multi-year cash flows. Establish the fleet/service boundary, dated evidence, accounting conventions, decision constraints and competing explanations for cost or reliability differences. Compare conditional adoption and charging choices against a matched-service baseline, preserving uncertainty and sensitivity to demand and infrastructure availability. Label any proxy or synthetic operational and financial inputs; do not invent quotes, tariffs, available charging capacity or investment returns."
+    },
+    {
+      "id": "c_residential_energy_dynamics",
+      "title": "C. Residential energy-load dynamics",
+      "problem": "Investigate a specific residential energy-load forecasting or demand-response question involving weather, device behavior, household heterogeneity, grid demand and aggregation across devices and households. Define observables, timing, population coverage, privacy constraints, competing mechanisms and the decision affected by forecast errors. Compare candidate representations or conditional demand-response scenarios with appropriate temporal and aggregation baselines. Use public or explicitly anonymized/proxy data and distinguish observed device behavior from assumed responses; prevent future-information leakage and do not control household devices."
+    },
+    {
+      "id": "d_whole_cell_mechanistic_model",
+      "title": "D. Whole-cell synthetic-biology model",
+      "problem": "Investigate a bounded, nonclinical whole-cell mechanistic modeling question using public biological models and evidence. Establish which metabolic, gene-expression, multi-omics, growth and environmental interactions are necessary for the chosen observable and which remain out of scope. Compare rival explanations or conditional simulated perturbations while separating molecular, cellular and organism-level claims. Limit work to nonclinical public-data modeling and computational hypothesis assessment; clinical and tumor-targeting interventions are outside this case. Missing measurements, calibration, parameter identifiability and model coverage must remain explicit gaps. Synthetic fixtures test computational behavior only; do not invent biological calibration or claim validated cellular, therapeutic or product performance."
+    },
+    {
+      "id": "e_deterioration_resilience",
+      "title": "E. Infrastructure deterioration and resilience",
+      "problem": "Investigate a bounded infrastructure condition, inspection or maintenance decision linking structural state, environmental exposure, deterioration, imperfect inspection observations and resilience or time-to-failure. Define the asset class, observation process, decision horizon, rival degradation explanations and consequences of missing measurements. Compare conditional inspection or maintenance choices with an explicit baseline using public or labeled anonymized/proxy fixtures. Separate inferred latent condition from verified condition and simulated failure times from validated predictions; do not certify structural safety or authorize maintenance."
+    },
+    {
+      "id": "f_procurement_networks",
+      "title": "F. Procurement collusion networks",
+      "problem": "Investigate a bounded procurement-network question using public or properly anonymized transaction, staff and vendor records. Define the entities, relationships, time windows, missingness, lawful analytical scope and the investigation decision being supported. Compare suspicious-pattern hypotheses with benign alternatives such as specialization, market concentration, seasonality, policy changes and data artifacts. Evaluate graph, temporal and transaction baselines, uncertainty and the value of additional evidence. Network communities, anomaly scores and threshold exceedances are investigative leads, not proof of collusion, misconduct or guilt. Do not identify private individuals, make unsupported accusations or initiate enforcement or outreach."
+    },
+    {
+      "id": "g_urban_mobility_enforcement",
+      "title": "G. Urban mobility / traffic enforcement",
+      "problem": "Convert the broad urban mobility and traffic-enforcement brief into one explicit modeling or simulation question with a named decision, observable endpoint and bounded road/time scope. Investigate interactions among traffic flows, driver behavior, enforcement, crashes, land use and policy feedback, including rival explanations and reporting or exposure bias. Compare conditional interventions with a matched baseline using public or labeled proxy fixtures. Distinguish association from intervention effects and model output from validated crash reduction; a dashboard alone does not establish a completed investigation. Do not perform enforcement or make individual targeting decisions."
+    },
+    {
+      "id": "h_wildfire_resilience",
+      "title": "H. Wildfire consequence and community resilience",
+      "problem": "Investigate a bounded wildfire-consequence or community-resilience decision linking hazard propagation, exposure, land cover, infrastructure, population vulnerability and mitigation choices. Define spatial and temporal scales, source dates, observation limitations, rival mechanisms and the action-relevant endpoint. Compare conditional mitigation scenarios with a transparent baseline and distinguish static risk scores from modeled dynamic consequences. Label proxy or synthetic geospatial and population fixtures, preserve uncertainty in hazard and exposure, and do not treat exploratory rankings as validated emergency guidance or direct an operational response."
+    },
+    {
+      "id": "i_model_routing",
+      "title": "I. AI inference and model-routing systems",
+      "problem": "Investigate a bounded AI inference or model-routing decision linking request characteristics, available models, queueing, routing policies, feedback and latency, cost, quality and energy tradeoffs. Define the actual workload, observable metrics, model/tool availability, decision constraints, feedback delays and competing explanations for policy performance. Compare a routing or adaptation candidate with explicit fixed-model, simple-router or other relevant matched baselines under the same inputs and resource accounting. Freeze suitable development and protected evaluation boundaries before assessing improvement. Public, anonymized, replayed or proxy traces are admissible only with their origin and limits stated; simulated latency, cost, quality or energy is not measured production performance. Do not fabricate provider access, live benchmarks, energy observations, calibrated quality scores or superiority over baselines."
+    },
+    {
+      "id": "j_synthetic_data_workflow",
+      "title": "J. Multi-agent synthetic-data workflow",
+      "problem": "Investigate a bounded synthetic-data workflow as an internal orchestration and method-evaluation testbed. Define the intended downstream task, source-data permissions, privacy constraints, data-quality dimensions, generator choices, evaluation independence and workflow-control decisions. Compare candidate workflows with a matched simple generation or processing baseline while tracking failures, resource use and downstream utility. Synthetic records must remain labeled and separate from observed records; preserve held-out evaluation and avoid leakage from evaluation into generation. Do not infer privacy guarantees, scientific validity or downstream superiority from plausibility or a single proxy score."
+    },
+    {
+      "id": "k_agentic_decision_support",
+      "title": "K. Agentic decision-support workflow",
+      "problem": "Investigate a bounded agentic decision-support workflow involving specialist agents, predictive models, scenario comparisons, human-facing explanations and recommendations. Define the user's decision, evidence requirements, handoffs, feedback, observable failure modes and any causal or dynamic structure actually supported by the task. Compare the workflow with a matched chatbot, code-assisted or other appropriate simpler baseline using the same task inputs, tools, budget and evaluation criteria. Test the harness and human-interaction behavior without presenting workflow complexity as scientific capability. Preserve user steering, uncertainty, unsupported claims and action boundaries; recommendations do not authorize external actions or establish improved decisions."
+    }
+  ],
+  "shared_context": "Transferable evaluation charter: the investigation agent owns problem framing, source selection, representation, model/code choices, tests and next-step decisions. Start with a bounded decision, observable endpoint, rival explanations and an inspectable evidence/input inventory. Public, anonymized, proxy, replayed and synthetic fixtures are admissible only when their origin, transformations, privacy assumptions, information cutoff and limitations are stated explicitly; they must never be relabeled as observed or calibrated real-world evidence. Obtain actual source bytes when needed and possible, preserving provenance and access failures. Freeze a suitable baseline, comparative protocol, resource accounting and held-out evaluation boundary before measuring claimed improvement. Use matched task inputs, tool access and budgets when comparing Symplex with a baseline chatbot, code-assisted workflow or AutoML system; record differences that prevent matching. Preserve unsuccessful candidates, invalid tests, rejected proposals, unavailable tools and changes in scope. Distinguish numerical correctness, model fit, independent empirical validation, user usefulness and scientific or causal claims. Deliver reusable actual artifacts and a decision brief, or a precise supported blocker. Whole-cell work is nonclinical public mechanistic modeling only; no invented calibration. Procurement patterns are leads, never proof of guilt. No intervention, external communication, deployment or additional paid execution is authorized by this file. Prior fit ratings and expected benefits are hypotheses to evaluate, not conclusions.",
+  "milestones": [
+    "problem_dna",
+    "complex_system",
+    "experiment_protocol",
+    "compute_package",
+    "experiment_comparison",
+    "model_critique",
+    "decision_brief"
+  ],
+  "review_axes": [
+    "decision-owner, endpoint, system boundary and scope specificity",
+    "rival testability, model traceability and semantic consistency",
+    "actual source bytes, provenance, observation timing and access limitations",
+    "explicit separation of public observations, anonymized data, proxy/replayed traces and synthetic fixtures",
+    "executed artifacts, reproducibility, unit/column binding and substantive numerical checks",
+    "matched baseline chatbot, code-assisted and AutoML comparisons where applicable, with identical task inputs, actual tool access and cumulative budgets or explicit mismatch disclosures",
+    "baseline and candidate evidence available at decision time, feedback delays and protected evaluation hygiene",
+    "observed cost, latency, quality and energy versus estimated or simulated quantities",
+    "diagnostics and proxy metrics versus independent empirical, privacy, causal or scientific validation",
+    "human steering, explanation usefulness, uncertainty, failure preservation and actionable next evidence",
+    "no superiority, fit, safety, clinical, causal or misconduct conclusions without supporting matched evidence"
+  ]
+}
